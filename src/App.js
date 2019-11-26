@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import HelloWorld from './components/HelloWorld'
 
-class App extends Component {
-  render() {
-    return <HelloWorld />
+const App = () => {
+  const clickMe = mouse => {
+    console.log('mouse: ' + mouse)
   }
+
+  return <HelloWorld handleButtonEvent={clickMe} />
 }
 
 export default App
